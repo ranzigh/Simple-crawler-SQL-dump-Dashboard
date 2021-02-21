@@ -8,6 +8,9 @@ Gleichzeitig kann aus der Datenbank der Aktienverlauf extrahiert, geplottet  und
 Was hier in den Projekt nicht enthalten ist, ist die Einrichtung zweier Cronjobs. Die sind aber essenziell, damit das alles funktioniert.
 
 Im Terminal dazu:
-'crontab -e' 
-0 9-18 * * 1-5 python3 
-0 9-18 * * 1-5 python3 
+'crontab -e'
+eingeben und folgende Zeilen hinzufügen:
+
+'0 9-18 * * 1-5 python3 SQLextrakt.py'
+
+'0 9-18 * * 1-5 python3 crawlerSQLdumper.py'
